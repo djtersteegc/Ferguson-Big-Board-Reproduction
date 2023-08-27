@@ -50,7 +50,7 @@ An updated BOM is available at https://docs.google.com/spreadsheets/d/1wBH6rk6yo
 
 Most of the capacitors have a 6.35mm lead spacing, 3D printable lead forming tools are available in the **tools** directory of this repo for modifying the more standard (these days) 5.08mm spacing of generic MLCC caps.  There is also a bender for the axial tantalums.
 
-<img src="docs/lead-forming-tools.jpg" alt="lead-forming-tools" />
+<img src="docs/lead-forming-tools.JPG" alt="lead-forming-tools" />
 
 <img src="docs/6.35mm-lead-former.jpg" alt="6.35mm-lead-former" />
 
