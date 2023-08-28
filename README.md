@@ -1,3 +1,7 @@
+## Still a work in progress, if you are interested in a version 1.0 board to help debug and get this design working, see the VCF forum thread below.
+
+
+
 # Ferguson Big Board Reproduction
 
 <img src="docs/front-v1.0.jpg" alt="front" />
@@ -6,7 +10,7 @@
 
 
 
-Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/
+Original is on the left above, the repoduction is on the right. Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/
 
 Mostly original with the following changes:
 
@@ -26,9 +30,11 @@ Like the original board, VPP on the Character Set EPROM (U73, pin 21) is unconne
 
 C114 pads have the footprint of vias and no symbol on the silkscreen layer.  Same as the original, but could be improved.
 
-Right pad R40 unconnected, should be connected on back copper to the base of Q2 above it.
+Right pad R40 unconnected, should be connected on bottom copper to the base of Q2 above it.
 
 Top pad of R25 unconnected, should be connected on top copper to top pad of R26.
+
+Pins 4 and 5 at U77 unconnected, should be connected on bottom copper.
 
 ### Serial Keyboard Adapter
 
@@ -56,7 +62,7 @@ Most of the capacitors have a 6.35mm lead spacing, 3D printable lead forming too
 
 There is likely going to be a bit of a bend in a PCB of this size, so make sure your sockets are tight to the board before soldering them down.  I find it's quicker to tack one leg, flip the board, and then use your finger to **gentely** push the socket down while reheating the single solder joint.  You can also tape/blue tack the sockets before soldering (takes longer) or buy the fancy sockets that snap into the board but that will get really expensive give the component count here.
 
-The single row jumpers JP1, JP7, and JP8 are tigher between the adjacent sockets, so make sure they fit before you completely solder the IC sockets down.
+The single row jumpers JP1, JP7, and JP8 are tight between the adjacent sockets, so make sure they fit before you completely solder the IC sockets down.
 
 
 
