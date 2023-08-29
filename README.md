@@ -38,6 +38,10 @@ Pins 4 and 5 at U77 unconnected, should be connected on bottom copper.
 
 Pins 19 and 20 on U65 unconnected, should be connected on bottom copper.
 
+RP2-6 and J1-42 are unconnected, should be connected on bottom copper.
+
+RP1-2 and J1-6 are unconnected, should be connected on top copper.
+
 ### Serial Keyboard Adapter
 
 I also created a PS/2 to parallel keyboard adapter PCB that should plug right into the Big Board based on the work shared here, https://forum.vcfed.org/index.php?threads/ferguson-big-board-1-monitor-rom.32705/#post-405189.  It's available at https://github.com/djtersteegc/ferguson-ps2-keyboard-adapter
