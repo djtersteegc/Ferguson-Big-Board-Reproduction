@@ -48,6 +48,22 @@ I also created a PS/2 to parallel keyboard adapter PCB that should plug right in
 
 <img src="docs/keyboard-adapter.jpg" alt="keyboard-adapter" />
 
+### Power
+
+The manual calls for the following:
+
++5V at 3 amps
+
++12V at 0.25 amps
+
+-12V at 0.20 amps
+
+Either a Mean Well RT-50B (5V@4A) or RT-65B (5V@5A) will do the job. I chose the slighty larger RT-65B since it was only a few bucks more. 3D printable case designs for both that also incorporate the reset button are available in the [psu](psu/README.md) directory.
+
+<img src="docs/psu-case.jpg" alt="psu-case" />
+
+
+
 ### **Other Links**
 
 Original manuals and schematics  on BitSaver - http://www.bitsavers.org/pdf/ferguson/Big_Board_1980.pdf 
