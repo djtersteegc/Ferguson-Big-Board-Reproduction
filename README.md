@@ -70,6 +70,8 @@ U22 pin 8 should be connected to the trace running immediately above it to conne
 
 U37 pin 6 should be connected to trace running immediately below it to connect to U38 pin 10 and U10 pin 9.
 
+U35 pin 1 should be connected to the +5V rail immediately above it.
+
 ### Serial Keyboard Adapter
 
 I also created a PS/2 to parallel keyboard adapter PCB that should plug right into the Big Board based on the work shared here, https://forum.vcfed.org/index.php?threads/ferguson-big-board-1-monitor-rom.32705/#post-405189.  It's available at https://github.com/djtersteegc/ferguson-ps2-keyboard-adapter
