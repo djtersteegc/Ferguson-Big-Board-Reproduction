@@ -68,7 +68,7 @@ U81 pin 1 should be connected on top copper to the via immedately to it's right 
 
 U22 pin 8 should be connected to the trace running immediately above it to connect to U9 pin 11 and U25 pin 5.  There is a via under U21by pin 9 that can complete this connection.
 
-U37 pin 6 should be connected to trace running immediately below it to connect to U38 pin 10 and U10 pin 9.
+U37 pin 6 should be connected to trace running immediately below it to connect to U38 pin 10 and U10 pin 5. A bodge between U37-6 and U38-10 is the most direct.
 
 U35 pin 1 should be connected to the +5V rail immediately above it.
 
