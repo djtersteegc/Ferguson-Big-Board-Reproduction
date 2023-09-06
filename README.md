@@ -1,7 +1,3 @@
-## Still a work in progress, if you are interested in a version 1.0 board to help debug and get this design working, see the VCF forum thread below.
-
-
-
 # Ferguson Big Board Reproduction
 
 <img src="docs/front-v1.0.jpg" alt="front" />
@@ -10,7 +6,7 @@
 
 
 
-Original is on the left above, the repoduction is on the right. Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/
+Original is on the left above, the repoduction is on the right. Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/ Currently composite output, serial and keyboard input, and disk operations have been confirmed on v1.0 boards with the appropiate rework documented below.  Still need to confirm CTC and the extra PIO function as intended.
 
 Mostly original with the following changes:
 
@@ -92,7 +88,19 @@ Either a Mean Well RT-50B (5V@4A) or RT-65B (5V@5A) will do the job. I chose the
 
 <img src="docs/psu-case.jpg" alt="psu-case" />
 
+### Composite Video Output
 
+On JB1 connect pins 10 and 11, pins 3 and 4, and pins 5 and 6.  This routes both the v.sync and h.sync signals to the composite output, and inverts the video (white on black). Then build a cable using something like a Dupont two pin 2.54mm connector and connect you ground to pin 9 and signal to pin 10 on connector J6.
+
+### Serial Terminal
+
+Instead of a keyboard and monitor, you can also operate the BigBoard via a serial termainl connected to the B channel connector J3.  For a DB9 male DTE cable wire accordingly, I used a three pin Dupont connector.  
+
+  <img src="docs/serial-cable.jpg" alt="serial-cable" />
+
+On JB5 jumper pins 3 and 6, and pins 9 and 10.  You will need to use a null modem cable to connect to your terminal device, or PC USB adapter running something like Terraterm.
+
+The port will autobaud when you hit the return key, up to 19.2K.  I run the terminal set to 19,200 baud, 7 bit, odd parity, 1 stop bits, with no flow control.  When you startup or reset the big board, the first device, keyboard or serial terminal, that sends a return character will become the input and output device for the board.
 
 ### **Other Links**
 
@@ -112,9 +120,11 @@ Most of the capacitors have a 6.35mm lead spacing, 3D printable lead forming too
 
 <img src="docs/6.35mm-lead-former.jpg" alt="6.35mm-lead-former" />
 
-There is likely going to be a bit of a bend in a PCB of this size, so make sure your sockets are tight to the board before soldering them down.  I find it's quicker to tack one leg, flip the board, and then use your finger to **gentely** push the socket down while reheating the single solder joint.  You can also tape/blue tack the sockets before soldering (takes longer) or buy the fancy sockets that snap into the board but that will get really expensive give the component count here.
+There is likely going to be a bit of a bend in a PCB of this size, so make sure your sockets are tight to the board before soldering them down.  I find it's quicker to tack one leg, flip the board, and then use your finger to **gently** push the socket down while reheating the single solder joint.  You can also tape/blue tack the sockets before soldering (takes longer) or buy the fancy sockets that snap into the board but that will get really expensive give the component count here.
 
 The single row jumpers JP1, JP7, and JP8 are tight between the adjacent sockets, so make sure they fit before you completely solder the IC sockets down.
+
+The resistor networks RP1 and RP2 and are also tight against the 50 pin disk connector J1, so I installed a cable first to confirm clearance and then angled the networks back a bit before soldering them in.
 
 
 
