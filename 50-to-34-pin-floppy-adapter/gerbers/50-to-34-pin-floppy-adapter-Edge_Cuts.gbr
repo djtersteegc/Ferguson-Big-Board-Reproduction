@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,7.0.7*%
+%TF.CreationDate,2023-09-16T00:08:42-05:00*%
+%TF.ProjectId,50-to-34-pin-floppy-adapter,35302d74-6f2d-4333-942d-70696e2d666c,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.7) date 2023-09-16 00:08:42*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.100000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X134493000Y-59436000D02*
+X198247000Y-59436000D01*
+X198247000Y-75057000D01*
+X134493000Y-75057000D01*
+X134493000Y-59436000D01*
+M02*

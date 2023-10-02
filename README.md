@@ -38,6 +38,8 @@ Connector J1-6 (Low Current) connects to resistor network pin RN1-2, not RN1-3.
 
 Resistor networks RN1 and RN2 are labeled RP1 and RP2 respectively on the PCB silkscreen
 
+The output from U87 pin 4 that controls the two 74LS242 buffers, U99 and U100, does not go though U103 and instead hooks directly to the 74LS242 chips.  This makes sense since you need a high signal to the buffers to read data from the FD1771 which U87 (NOR) outputs when both 1771CS and RDB are asserted active low.
+
 ##### Sheet 5 - GP PIO/SIO
 
 BAUDA and BAUDB are reversed, U107 (8116) Pin 12 is BAUDB, U107 (8116) Pin 8 is BAUDA
@@ -68,6 +70,10 @@ U37 pin 6 should be connected to trace running immediately below it to connect t
 
 U35 pin 1 should be connected to the +5V rail immediately above it.
 
+### **V1.1 PCB**
+
+In the works...
+
 ### Serial Keyboard Adapter
 
 I also created a PS/2 to parallel keyboard adapter PCB that should plug right into the Big Board based on the work shared here, https://forum.vcfed.org/index.php?threads/ferguson-big-board-1-monitor-rom.32705/#post-405189.  It's available at https://github.com/djtersteegc/ferguson-ps2-keyboard-adapter
@@ -92,6 +98,10 @@ Either a Mean Well RT-50B (5V@4A) or RT-65B (5V@5A) will do the job. I chose the
 
 On JB1 connect pins 10 and 11, pins 3 and 4, and pins 5 and 6.  This routes both the v.sync and h.sync signals to the composite output, and inverts the video (white on black). Then build a cable using something like a Dupont two pin 2.54mm connector and connect you ground to pin 9 and signal to pin 10 on connector J6.
 
+If you want to make a fancy composite video adapter PCB, head over to the [composite-video-adapter](composite-video-adapter/README.md) directory.
+
+<img src="docs/composite-video-adapter.jpg" alt="composite-video-adapter" />
+
 ### Serial Terminal
 
 Instead of a keyboard and monitor, you can also operate the BigBoard via a serial termainl connected to the B channel connector J3.  For a DB9 male DTE cable wire accordingly, I used a three pin Dupont connector.  
@@ -101,6 +111,22 @@ Instead of a keyboard and monitor, you can also operate the BigBoard via a seria
 On JB5 jumper pins 3 and 6, and pins 9 and 10.  You will need to use a null modem cable to connect to your terminal device, or PC USB adapter running something like Terraterm.
 
 The port will autobaud when you hit the return key, up to 19.2K.  I run the terminal set to 19,200 baud, 7 bit, odd parity, 1 stop bits, with no flow control.  When you startup or reset the big board, the first device, keyboard or serial terminal, that sends a return character will become the input and output device for the board.
+
+### Floppy Drive
+
+A number of disk image compatible with a Flash Floppy converted Gotek are available in the [flashfloppy](flashfloppy) directory.  Copy the content of the directoy to our USB stick and make sure you are using an up to date version of the Flash Floppy firmware.
+
+To convert the 50 pin drive connector to a 34 pin floppy drive, you can build the adapter in the [50-to-34-pin-floppy-adapter](50-to-34-pin-floppy-adapter/README.md) directory.
+
+<img src="docs/50-to-34p-floppy-adapter.jpg" alt="50-to-34p-floppy-adapter" />
+
+The general purpose 50 to 34 pin adapter available at https://github.com/pski/fd50to34 has also been tested and works well.
+
+### PIO Port and Blinken LED's
+
+What good is an extra PIO port without something for it to do?  Build yourself a sixteen [LED blinken board](pio-port-blinkenlights/README.md) and make it dance.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wRvbjzvjgtw?si=DOPDeuxUrS1r8yNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### **Other Links**
 
