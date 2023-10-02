@@ -16,5 +16,5 @@ The composite jack is one of standard AliExpress models, often called [AV-103B](
 
 ### Assembly
 
-Should be self explanatory. I soldered the 2x6 IBC socket first, followed by the jack.
+Should be self explanatory. I soldered the 2x5 IDC socket first, followed by the jack.
 

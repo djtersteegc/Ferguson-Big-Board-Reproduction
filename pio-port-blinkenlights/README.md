@@ -18,4 +18,4 @@ Pin one on the resistor array's both point towards the middle of the PCB.
 
 ### Software
 
-There is a Turbo Pascal compiled exectutable **blinken.com** on the PASCAL.img disk.  The source is also available on the disk, **blinken.pas** if you would like to try to hand and creating other patterns.
+On the PASCAL.img disk there a various blinken programs and exectutables written in Turbo Pascal 3.0a.
