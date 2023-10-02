@@ -114,7 +114,7 @@ The port will autobaud when you hit the return key, up to 19.2K.  I run the term
 
 ### Floppy Drive
 
-A number of disk image compatible with a Flash Floppy converted Gotek are available in the [flashfloppy](flashfloppy) directory.  Copy the content of the directoy to our USB stick and make sure you are using an up to date version of the Flash Floppy firmware.
+A number of disk image compatible with a Flash Floppy converted Gotek are available in the [flashfloppy](flashfloppy) directory.  Copy the content of the directoy to a USB stick and make sure you are using an up to date version of the Flash Floppy firmware.
 
 To convert the 50 pin drive connector to a 34 pin floppy drive, you can build the adapter in the [50-to-34-pin-floppy-adapter](50-to-34-pin-floppy-adapter/README.md) directory.
 
