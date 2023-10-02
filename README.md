@@ -126,7 +126,9 @@ The general purpose 50 to 34 pin adapter available at https://github.com/pski/fd
 
 What good is an extra PIO port without something for it to do?  Build yourself a sixteen [LED blinken board](pio-port-blinkenlights/README.md) and make it dance.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wRvbjzvjgtw?si=DOPDeuxUrS1r8yNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```none
+[![Watch the video](https://img.youtube.com/vi/wRvbjzvjgtw/maxresdefault.jpg)](https://youtu.be/wRvbjzvjgtw)
+```
 
 ### **Other Links**
 
