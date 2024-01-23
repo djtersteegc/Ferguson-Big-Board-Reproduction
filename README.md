@@ -122,6 +122,10 @@ To convert the 50 pin drive connector to a 34 pin floppy drive, you can build th
 
 The general purpose 50 to 34 pin adapter available at https://github.com/pski/fd50to34 has also been tested and works well.
 
+If you are feeling extra industriuous, you can build my custom FlashFloppy compatible board the plugs directly into the Big Board's floppy board, not extra cabling needed.  Details at https://github.com/djtersteegc/OpenFlops-Ferguson
+
+![openflops-ferguson](docs/openflops-ferguson.jpg)
+
 ### PIO Port and Blinken LED's
 
 What good is an extra PIO port without something for it to do?  Build yourself a sixteen [LED blinken board](pio-port-blinkenlights/README.md) and make it dance.
