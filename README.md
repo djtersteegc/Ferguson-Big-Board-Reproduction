@@ -6,7 +6,7 @@
 
 
 
-Original is on the left above, the repoduction is on the right. Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/ Currently composite output, serial and keyboard input, and disk operations have been confirmed on v1.0 boards with the appropiate rework documented below.  Still need to confirm CTC and the extra PIO function as intended.
+Original is on the left above, the repoduction is on the right. Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/ Currently composite output, serial and keyboard input, and disk operations have been confirmed on v1.0 boards with the appropiate rework documented below.
 
 Mostly original with the following changes:
 
@@ -72,7 +72,43 @@ U35 pin 1 should be connected to the +5V rail immediately above it.
 
 ### **V1.1 PCB**
 
-In the works...
+All the V1.0 errata has been fixed and some additional features dicussed below added.  The goal was still to try to maintain a stock appearance.
+
+#### 4 MHz Operation
+
+One of the popular mods was reaplacing the Z80 with Z80A and increasing the frequency from 2.5 MHz to 4 MHz.  There were several ways to do this, but v1.1 implements the ability to easily do the mod discussed in Micro Cornucopia issue #3 (which is what Kaypro also adopted in their designs) with solder jumpers on the back of the board.  No trace cutting or bodge wires needed.
+
+![4mhz-mod](docs/4mhz-mod.png)
+
+For stock 2.5 MHZ operation you need to install all the IC's per the BOM and use a 20 MHz crystal for Y2.  Then close the following three solder jumpers.
+
+![2.5mhz-jumper1](docs/2.5mhz-jumper1.png)
+
+![2.5mhz-jumper2](docs/2.5mhz-jumper2.png)
+
+For 4 MHZ operation do NOT install U97 and use a 16 MHz crystal for Y2.  Then close the following five solder jumpers.
+
+![4mhz-jumper1](docs/4mhz-jumper1.png)
+
+![4mhz-jumper2](docs/4mhz-jumper2.png)
+
+![4mhz-jumper3](docs/4mhz-jumper3.png)
+
+#### Fully Compensated Video Output
+
+Another Micro Cornucopia article in issue #14 discussing swapping the 74LS123's in the video output circuit with 74LS221's that are both voltage and temperature compensated in an effort to improve video output jitter.
+
+![video-jitter-fix](docs/video-jitter-fix.png)
+
+v1.1 already disconnects the appropiate pins on U38 and U51 from ground so all you need to do is use the updated values for C53, C69, R4, R3, and R5.
+
+#### Additional Tantalum Capacitor Locations
+
+Many Micro Cornucopia articles discuss bodging some additional tantalum caps to the video output section to improve quality.  While not labeled on the board to keep it more original looking, there are extra spots now to add them if you want to experiment.  Someone like a 22uF 10V (or higher) cap it probably a good start.
+
+![tantalum-locations-v1.1.png](docs/tantalum-locations-v1.1.png)
+
+
 
 ### Serial Keyboard Adapter
 
@@ -122,7 +158,7 @@ To convert the 50 pin drive connector to a 34 pin floppy drive, you can build th
 
 The general purpose 50 to 34 pin adapter available at https://github.com/pski/fd50to34 has also been tested and works well.
 
-If you are feeling extra industriuous, you can build my custom FlashFloppy compatible board the plugs directly into the Big Board's floppy board, not extra cabling needed.  Details at https://github.com/djtersteegc/OpenFlops-Ferguson
+If you are feeling extra industriuous, you can build my custom FlashFloppy compatible board the plugs directly into the Big Board's floppy board, no extra cabling needed.  Details at https://github.com/djtersteegc/OpenFlops-Ferguson
 
 ![openflops-ferguson](docs/openflops-ferguson.jpg)
 
@@ -144,7 +180,7 @@ ShadowTron's YouTube series on restoring an original board - https://www.youtube
 
 ### **Building Tips**
 
-An updated BOM is available at https://docs.google.com/spreadsheets/d/1wBH6rk6youMYVbVZ4vIVZXSmrotHBEZvTTkY6PEE75M/edit?usp=sharing  The one in the manual is missing some components and has the incorrect value for the video crystal.
+An updated BOM is available at https://docs.google.com/spreadsheets/d/1wBH6rk6youMYVbVZ4vIVZXSmrotHBEZvTTkY6PEE75M/edit?usp=sharing  The one in the manual is missing some components and has the incorrect value for the video crystal. 13.9776 mHz crystals are pretty much unobtanium these days, but 13.97734 MHz ones are still availbe in two different flavors on [LCSC](https://www.lcsc.com/products/Crystals_537.html).  Otherwise a 14 MHz version is a better choice than the stock 14.31818 MHz value.
 
 Most of the capacitors have a 6.35mm lead spacing, 3D printable lead forming tools are available in the **tools** directory of this repo for modifying the more standard (these days) 5.08mm spacing of generic MLCC caps.  There is also a bender for the axial tantalums.
 
