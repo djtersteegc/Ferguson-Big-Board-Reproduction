@@ -194,11 +194,9 @@ The single row jumpers JP1, JP7, and JP8 are tight between the adjacent sockets,
 
 The resistor networks RP1 and RP2 and are also tight against the 50 pin disk connector J1, so I installed a cable first to confirm clearance and then angled the networks back a bit before soldering them in.
 
+The silkscreen on the board for Q1 and Q2 assume you are using metal cased TO-18 style transistors with the little tab.  If using the more common plastic cased TO-92 transistors, make sure the flat side of the case is facing towards the power connector end of the board.
 
-
-
-
-
+![transistor-pinout](docs/transistor-pinout.jpg)
 
 
 
