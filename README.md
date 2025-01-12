@@ -104,7 +104,7 @@ v1.1 already disconnects the appropiate pins on U38 and U51 from ground so all y
 
 #### Additional Tantalum Capacitor Locations
 
-Many Micro Cornucopia articles discuss bodging some additional tantalum caps to the video output section to improve quality.  While not labeled on the board to keep it more original looking, there are extra spots now to add them if you want to experiment.  Someone like a 22uF 10V (or higher) cap it probably a good start.
+Many Micro Cornucopia articles discussed bodging some additional tantalum caps to the video output section to improve quality.  While not labeled on the board to keep it more original looking, there are extra spots now to add them if you want to experiment.  Someone like a 22uF 10V (or higher) cap it probably a good start.
 
 ![tantalum-locations-v1.1.png](docs/tantalum-locations-v1.1.png)
 
@@ -196,7 +196,7 @@ The resistor networks RP1 and RP2 and are also tight against the 50 pin disk con
 
 The silkscreen on the board for Q1 and Q2 assume you are using metal cased TO-18 style transistors with the little tab.  If using the more common plastic cased TO-92 transistors, make sure the flat side of the case is facing towards the power connector end of the board.
 
-![transistor-pinout](docs/transistor-pinout.jpg)
+![transistor-pinout](docs/transistor-pinout.JPG)
 
 
 
