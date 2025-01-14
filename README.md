@@ -116,6 +116,10 @@ I also created a PS/2 to parallel keyboard adapter PCB that should plug right in
 
 <img src="docs/keyboard-adapter.jpg" alt="keyboard-adapter" />
 
+Strap JB6 cneter to right pad to set negative strobe.
+
+![JB6-keyboard-strobe-polarity](docs/JB6-keyboard-strobe-polarity.jpg)
+
 ### Power
 
 The manual calls for the following:
@@ -132,11 +136,21 @@ Either a Mean Well RT-50B (5V@4A) or RT-65B (5V@5A) will do the job. I chose the
 
 ### Composite Video Output
 
-On JB1 connect pins 10 and 11, pins 3 and 4, and pins 5 and 6.  This routes both the v.sync and h.sync signals to the composite output, and inverts the video (white on black). Then build a cable using something like a Dupont two pin 2.54mm connector and connect you ground to pin 9 and signal to pin 10 on connector J6.
+On JB1 connect pins 10 and 11, pins 3 and 4, and pins 5 and 6.
+
+![J6-composite-output](docs/J6-composite-output.jpg)
+
+This routes both the v.sync and h.sync signals to the composite output, and inverts the video (white on black). Then build a cable using something like a Dupont two pin 2.54mm connector and connect you ground to pin 9 and signal to pin 10 on connector J6.
 
 If you want to make a fancy composite video adapter PCB, head over to the [composite-video-adapter](composite-video-adapter/README.md) directory.
 
 <img src="docs/composite-video-adapter.jpg" alt="composite-video-adapter" />
+
+Jumper JB7 switches line character count between 97 and 128.  Strap middle pin to top pin to connect U11 pin 3 to +5V for 128 counts. Strap middle pin to bottom pin to connect U11 pin 3 to U10 pin 2 for 97 counts. *Micro Cornucopia, Number 10, February 1983, page 32*
+
+Jumper JB8 switches between 7 and 8 dot character widths. Strap middle pin to top pin to connect U24 pin 3 to +5V for 7 dots. Strap middle pin to bottom pin to connect U24 pin 3 to GND for 8 dots. *Micro Cornucopia, Number 10, February 1983, page 32*
+
+![JB7-JB8](docs/JB7-JB8.jpg)
 
 ### Serial Terminal
 
@@ -144,7 +158,11 @@ Instead of a keyboard and monitor, you can also operate the BigBoard via a seria
 
   <img src="docs/serial-cable.jpg" alt="serial-cable" />
 
-On JB5 jumper pins 3 and 6, and pins 9 and 10.  You will need to use a null modem cable to connect to your terminal device, or PC USB adapter running something like Terraterm.
+On JB5 jumper pins 5 and 6, and pins 9 and 10.
+
+![JB5-serial-channel-B](docs/JB5-serial-channel-B.jpg)
+
+You will need to use a null modem cable to connect to your terminal device, or PC USB adapter running something like Terraterm.
 
 The port will autobaud when you hit the return key, up to 19.2K.  I run the terminal set to 19,200 baud, 7 bit, odd parity, 1 stop bits, with no flow control.  When you startup or reset the big board, the first device, keyboard or serial terminal, that sends a return character will become the input and output device for the board.
 
@@ -169,6 +187,10 @@ What good is an extra PIO port without something for it to do?  Build yourself a
 [https://youtu.be/wRvbjzvjgtw](https://youtu.be/wRvbjzvjgtw)
 
 ![https://youtu.be/wRvbjzvjgtw](https://img.youtube.com/vi/wRvbjzvjgtw/maxresdefault.jpg)
+
+Make sure to strap pins 9 and 10, 11 and 12, 13 and 14, and 15 and 16 on JB4 to set all the PIO port bits to ouputs.
+
+![J6-composite-output](docs/J6-composite-output.jpg)
 
 ### **Other Links**
 
