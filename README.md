@@ -6,9 +6,9 @@
 
 
 
-Original is on the left above, the repoduction is on the right. Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/ Currently composite output, serial and keyboard input, and disk operations have been confirmed on v1.0 boards with the appropiate rework documented below.
+Original is on the left above, the repoduction is on the right. Redraw in Sprint Layout from scans of an unpopulated board, serial number B4088.  Project discussion thread on VCF is at https://forum.vcfed.org/index.php?threads/recreating-the-ferguson-big-board.68349/ 
 
-Mostly original with the following changes:
+Mostly original with the following changes present on v1.0 and v1.1 boards:
 
 Silkscreen of U52 corrected from a DIP-16 to DIP-14 socket.
 
@@ -72,7 +72,7 @@ U35 pin 1 should be connected to the +5V rail immediately above it.
 
 ### **V1.1 PCB**
 
-All the V1.0 errata has been fixed and some additional features dicussed below added.  The goal was still to try to maintain a stock appearance.
+All the V1.0 errata has been fixed and some additional features dicussed below added.  The goal was still to try to maintain a stock appearance from the topside, so the additional frequency selection and power to floppy disk port jumpers are all on the back side of the board.
 
 #### 4 MHz Operation
 
@@ -116,7 +116,7 @@ I also created a PS/2 to parallel keyboard adapter PCB that should plug right in
 
 <img src="docs/keyboard-adapter.jpg" alt="keyboard-adapter" />
 
-Strap JB6 cneter to right pad to set negative strobe.
+Strap JB6 center to right pad to set negative strobe.
 
 ![JB6-keyboard-strobe-polarity](docs/JB6-keyboard-strobe-polarity.jpg)
 
@@ -195,6 +195,8 @@ Make sure to strap pins 9 and 10, 11 and 12, 13 and 14, and 15 and 16 on JB4 to 
 ### **Other Links**
 
 Original manuals and schematics  on BitSaver - http://www.bitsavers.org/pdf/ferguson/Big_Board_1980.pdf 
+
+The Micro Cornucopia magazine archive is also available - http://www.bitsavers.org/magazines/Micro_Cornucopia/ 
 
 Enrico's excellent collection of information and other links - https://www.vintagesbc.it/vintage-computer-board/collezione/ferguson-big-board-i/
 
