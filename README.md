@@ -146,9 +146,15 @@ If you want to make a fancy composite video adapter PCB, head over to the [compo
 
 <img src="docs/composite-video-adapter.jpg" alt="composite-video-adapter" />
 
-Jumper JB7 switches line character count between 97 and 128.  Strap middle pin to top pin to connect U11 pin 3 to +5V for 128 counts. Strap middle pin to bottom pin to connect U11 pin 3 to U10 pin 2 for 97 counts. *Micro Cornucopia, Number 10, February 1983, page 32*
+Jumper JB7 and JB8 were not on the original boards, but added to implement the following video display options/improvements mentioned in *Micro Cornucopia, Number 10, February 1983, page 32*
 
-Jumper JB8 switches between 7 and 8 dot character widths. Strap middle pin to top pin to connect U24 pin 3 to +5V for 7 dots. Strap middle pin to bottom pin to connect U24 pin 3 to GND for 8 dots. *Micro Cornucopia, Number 10, February 1983, page 32*
+![JB7-JB8-article](docs/JB7-JB8-article.png)
+
+Jumper JB7 switches line character count between 97 and 128.  Strap middle pin to top pin to connect U11 pin 3 to +5V for 128 counts. Strap middle pin to bottom pin to connect U11 pin 3 to U10 pin 2 for 97 counts.
+
+Jumper JB8 switches between 7 and 8 dot character widths. Strap middle pin to top pin to connect U24 pin 3 to +5V for 7 dots. Strap middle pin to bottom pin to connect U24 pin 3 to GND for 8 dots.
+
+
 
 ![JB7-JB8](docs/JB7-JB8.jpg)
 
